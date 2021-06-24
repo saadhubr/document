@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 const Doc = require('./doc')
 
 
-const username = encodeURIComponent('drop')
-const password = encodeURIComponent('drop123')
-const clusterUrl = 'drop.hwbwf.mongodb.net';
-let dbURI = `mongodb+srv://${username}:${password}@${clusterUrl}/document`;
+const username = encodeURIComponent(process.env.DB_USERNAME)
+const password = encodeURIComponent(process.env.DB_PASSWPRD)
+const clusterUrl = process.env.CLUSTER_URL;
+let dbURI = `mongodb+srv://${username}:${password}@${clusterUrl}/${process.env.DB_NAME}`;
 
 mongoose.connect(dbURI, {
     useNewUrlParser: true,
