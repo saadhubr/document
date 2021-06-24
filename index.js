@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Doc = require('./doc')
+const Doc = require('./server/doc')
 
 
 const username = encodeURIComponent(process.env.DB_USERNAME)

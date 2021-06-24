@@ -2,8 +2,9 @@
   "name": "ducument",
   "version": "1.0.0",
   "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "concurrently \"cd server && npm start\" \"cd client && yarn start\""
+    "start": "concurrently \"npm start\" \"cd client && yarn start\""
   },
   "keywords": [],
   "author": "",
